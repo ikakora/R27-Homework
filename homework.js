@@ -3,7 +3,7 @@
 let userIsLoggedIn = false;
 let videoIsCommentable = false;
 
-let userCanComment = (userIsLoggedIn && videoIsCommentable)
+let userCanComment = userIsLoggedIn && videoIsCommentable;
 
 console.log(userCanComment);
 
@@ -12,7 +12,7 @@ console.log(userCanComment);
 userIsLoggedIn = false;
 let userIsBlocked = false;
 
-let userCanPost = (userIsLoggedIn && !userIsBlocked);
+let userCanPost = userIsLoggedIn && !userIsBlocked;
 
 console.log(userCanPost) 
 
@@ -21,7 +21,7 @@ console.log(userCanPost)
 let balance = 0;
 let userCartTotal = 0;
 
-let paymentComplete = (balance >= userCartTotal);
+let paymentComplete = balance >= userCartTotal;
 
 console.log(paymentComplete);
 
@@ -31,7 +31,7 @@ let userIsAdmin = false;
 let userIsModerator = false;
 let userIsCommentAuthor = false;
 
-let userCanDelete = (userIsAdmin || userIsModerator || userIsCommentAuthor);
+let userCanDelete = userIsAdmin || userIsModerator || userIsCommentAuthor;
 
 console.log(userCanDelete);
 
@@ -42,6 +42,6 @@ let primeMinisterKey = false;
 let generalOfArmiesKey = false;
 let masterKey = false;
 
-let bombWillLaunch = (presidentKey && primeMinisterKey && generalOfArmiesKey || masterKey);
+let bombWillLaunch = presidentKey && primeMinisterKey && generalOfArmiesKey || masterKey;
 
 console.log(bombWillLaunch);
